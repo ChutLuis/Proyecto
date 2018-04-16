@@ -7,7 +7,7 @@ namespace Proyecto.Models
 {
     public class Usuario
     {
-        public string Usuario { get; set; }
+        public string User { get; set; }
        
         public string Contraseña { get; set; }
 
