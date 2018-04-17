@@ -161,13 +161,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PeliculaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ArbolB.cs" />
+    <Compile Include="Models\ArbolBS.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\NodoS.cs" />
     <Compile Include="Models\Nodo.cs" />
     <Compile Include="Models\Pelicula.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -221,6 +224,7 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
+    <Content Include="Views\Pelicula\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
