@@ -1,0 +1,42 @@
+﻿@model Proyecto502Play_.Models.UserModel
+@{
+    ViewBag.Title = "Inicio de sesión";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true,"Login incorrecto, por favor verificar sus datos")
+
+    <div>
+    <form>
+        <fieldset class="form-group">
+            <legend>Inicio de sesión</legend>
+            
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Username</label>
+                <input type="text" class="form-control" placeholder="usuario" id="inputDefault">
+            </div>
+            
+            <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Password</label>
+                <input type="password" class="form-control" placeholder="Password" id="passDefault">
+            </div>
+
+            @*<div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>*@
+            
+
+            @*<div>@Html.LabelFor(u => u.username)</div>
+            <div>@Html.TextBoxFor(u=> u.username)</div>
+           
+            <div>@Html.LabelFor(u=> u.password ) </div>
+            <div>@Html.TextBoxFor(u=> u.password)</div>*@
+        </fieldset>
+        <input type="submit" class="btn btn-primary", value="Ingresar"/>
+    </form>
+    </div>
+}
+

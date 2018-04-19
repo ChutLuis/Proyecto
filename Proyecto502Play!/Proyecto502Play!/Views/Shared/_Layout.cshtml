@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 502 Play!</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+
+                @*<span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>*@
+            </button>
+            @Html.ActionLink("502 Play!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+
+                @if (Request.IsAuthenticated)
+                {
+                    @Html.Encode(User.Identity.Name)
+
+                    <li class="nav-item active">@Html.ActionLink("Salir", "Index", "Home", null, new { @class = "nav-item", style = "color: White" })</li>
+                }
+                else
+                {
+                    
+                    <li class="nav-item active"> @Html.ActionLink("Registrar", "Registration", "User", new {area = ""}, new { @class = "navbar", style = "color: White" })</li>
+                    
+                    <li class="nav-item active"> @Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "navbar", style = "color: White"})</li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - 502 Paly!</p>
+    </footer>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+</body>
+</html>
