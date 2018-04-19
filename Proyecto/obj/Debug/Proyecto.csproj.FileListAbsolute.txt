@@ -72,3 +72,5 @@ C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\bi
 C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\obj\Debug\Proyecto.dll
 C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\bin\Microsoft.VisualStudio.DebuggerVisualizers.dll
+C:\Users\Luis\Documents\Visual Studio 2015\Projects\Project\Proyecto\Proyecto\bin\es\Microsoft.VisualStudio.DebuggerVisualizers.resources.dll

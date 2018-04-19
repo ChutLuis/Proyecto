@@ -1,0 +1,18 @@
+﻿@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Label("Carga de Json Peliculas")
+@Html.BeginForm("Upload", "Pelicula", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+<div>
+    @Html.TextBox("file", "", new { type = "file" }) <br />
+
+    <input type="submit" value="Upload" />
+
+    @ViewBag.Message
+
+</div>
+}
+
+

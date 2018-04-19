@@ -1,7 +1,57 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Carga";
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 }
-@Html.Label("Crear Texto")
 
 
 
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        @Html.ActionLink("GUAFLIX", "Administrador", "Login", new { area = "" }, new { @class = "navbar-brand" })
+        <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Inicio", "Administrador", "Login")</li>
+            <li>@Html.ActionLink("Lista de Usuarios", "Users", "Login")</li>
+            <li>@Html.ActionLink("Mostrar Catalogo", "Catalogo", "Login")</li>
+            <li>@Html.ActionLink("Cerrar Sesion", "Index", "Home")</li>
+        </ul>
+    </div>
+</div>
+
+<h2>Carga de Datos Json</h2>
+<div id="foto">
+    <img id="ima" src="@Url.Content("~/Imagenes/nave.png")" width="300" height="300" />
+</div>
+
+<div id="mover2">
+    <div id="buscar">
+        @using (Html.BeginForm("Carga", "Carga", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <span>Seleccionar archivo:</span>
+            <input type="file" name="postedFile" />
+            <br />
+            <input type="submit" value="Subir" />
+            <span style="color:green">@ViewBag.Message</span><br />
+        }
+    </div>
+</div>
+<h3>Generar Arboles de cada Tipo</h3>
+<div id="arboles">
+    <div id="Pelis">
+        @Html.ActionLink("Crear Arboles de Pelicula", "CrearPelis", "Carga", new { area = "" }, new { @class = "navbar-brand1" })<img id="ima" src="@Url.Content("~/Imagenes/peli.png")" width="100" height="100" />
+    </div>
+    <br />
+    <div id="Series">
+        @Html.ActionLink("Crear Arboles de Serie", "CrearSeries", "Carga", new { area = "" }, new { @class = "navbar-brand2" })<img id="ima" src="@Url.Content("~/Imagenes/series.png")" width="100" height="100" />
+    </div>
+    <br />
+    <div id="Docus">
+        @Html.ActionLink("Crear Arboles de Documentales", "CrearDocus", "Carga", new { area = "" }, new { @class = "navbar-brand3" })<img id="ima" src="@Url.Content("~/Imagenes/camara.jpg")" width="100" height="100" />
+    </div>
+</div>
+<br />
+<br />
+<br />
