@@ -13,6 +13,8 @@ namespace Proyecto.Models
         {
             Raiz = null;
         }
+        
+
         public void Insertar(T value)
         {
             if (Raiz == null)

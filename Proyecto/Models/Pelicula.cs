@@ -10,23 +10,22 @@ namespace Proyecto.Models
     {
         public string name { get; set; }
         public int year { get; set; }
-        public string tipe { get;set;}
+        public string type { get;set;}
         public string genre { get; set;}
 
 
 
         public string ToFixedSizeString()
         {
-            return $"{string.Format("{0,-20}", tipe)} |{string.Format("{0,-20}", name)}" +
-                   $"{year.ToString("00000000000,-00000000000")}|{string.Format("{0,-20}", genre)}";                   
+            return $"{string.Format("{0,-20}", type)} |{string.Format("{0,-20}", name)}" +
+                   $"{year.ToString("00000000000,-00000000000")}|{string.Format("{0,-20}", genre)}";
         }
         public int FixedSizeText
         {
-           get { return FixedSize; }
+            get { return FixedSize; }
         }
         public static int FixedSize { get { return 127; } }
 
-        
     }
     public class ByteGenerator
     {
