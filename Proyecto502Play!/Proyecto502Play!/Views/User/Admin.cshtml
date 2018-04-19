@@ -1,0 +1,60 @@
+﻿@using Proyecto502Play_.Controllers
+@using Proyecto502Play_.Models
+@model IEnumerable<Proyecto502Play_.Models.UserModel>
+
+@{
+    ViewBag.Title = "Administrador de Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Administrador</h2>
+</div>
+
+<p>
+    @Html.ActionLink("Cargar usuarios", "CargaUsuarios")
+    @Html.ActionLink("Registrar nuevo", "Registration")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th></th>
+    </tr>
+
+    @if (Model != null)
+    {
+        foreach (UserModel Usuarios in Model) {
+             <tr>
+                 <td>
+                     @Html.DisplayFor(modelItem => Usuarios.nombre)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => Usuarios.apellido)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => Usuarios.edad)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => Usuarios.username)
+                 </td>
+                 <td>
+                     @Html.DisplayFor(modelItem => Usuarios.password)
+                 </td>
+             </tr>
+    }
+}
+</table>

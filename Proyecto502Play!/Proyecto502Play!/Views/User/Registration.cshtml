@@ -1,0 +1,49 @@
+﻿@model Proyecto502Play_.Models.UserModel
+@{
+    ViewBag.Title = "Registrate";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Registrate</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Error al crear usuario")
+
+    <div>
+        <fieldset>
+            <legend>Login Form</legend>
+            <div>@Html.LabelFor(u => u.nombre ) </div>
+            <div>
+                @Html.TextBoxFor(u=> u.nombre)
+                @Html.ValidationMessageFor(u => u.nombre)
+            </div>
+
+            <div>@Html.LabelFor(u=> u.apellido ) </div>
+            <div>
+                @Html.TextBoxFor(u=> u.apellido)
+                @Html.ValidationMessageFor(u=> u.apellido)
+            </div>
+            
+            <div>@Html.LabelFor(u => u.edad) </div>
+            <div>
+                @Html.TextBoxFor(u => u.edad)
+                @Html.ValidationMessageFor(u => u.edad)
+            </div>
+            
+            <div>@Html.LabelFor(u => u.username) </div>
+            <div>
+                @Html.TextBoxFor(u => u.username)
+                @Html.ValidationMessageFor(u => u.username)
+            </div>
+            
+            <div>@Html.LabelFor(u => u.password) </div>
+            <div>
+                @Html.PasswordFor(u => u.password)
+                @Html.ValidationMessageFor(u => u.password)
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </fieldset>
+    </div>
+}
+

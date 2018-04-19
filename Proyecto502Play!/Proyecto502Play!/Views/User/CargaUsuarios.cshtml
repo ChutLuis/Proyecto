@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "CargaUsuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Carga de Usuarios</h3>
+
+@using (Html.BeginForm("CargaUsuarios", "User", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <div class="form-group">
+        <label for="json">File input</label>
+        <input type="file" class="form-control-file" id ="json" aria-describedby="fileHelp" name="postedFile">
+        <br/>
+        <input type="submit" name="Submit" id="Submit" value="Upload"/>
+    </div>
+}
+
+
